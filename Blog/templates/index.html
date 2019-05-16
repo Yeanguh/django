@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YeanguhBlog</title>
+</head>
+<body>
+<span>hello ~~~ 小鸡仔</span>
+{% for blog in all_blog %}
+
+    <article>
+    {{ blog.title }}   #博客的标题
+    {{ blog.create_time|date:'Y-m-d' }}  #博客的发表时间，用装饰器date指定显示格式
+    {{ blog.category.name }}  博客的分类
+    {{ blog.content }}   博客的内容
+    </article>
+
+{% endfor %}
+
+</body>
+</html>
